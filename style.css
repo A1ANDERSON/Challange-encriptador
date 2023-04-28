@@ -1,0 +1,290 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #E5E5E5;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+.logo-alura{
+  margin-top: 35px;
+  margin-left: 100px;
+}
+
+
+.container{
+  width: 90%;
+  margin: auto;
+}
+
+.text{
+  height: 50%;
+  margin: 3% auto 0;
+  display: inline-block;
+  font-size: 32px;
+  color: rgb(19,38,92);
+  border: none;
+  background-color: #E5E5E5;
+  resize: none; /* Desaparecer la redimension del textarea */
+}
+
+.text::placeholder{
+  color: #0A3871;
+  ;
+}
+
+textarea:focus{
+  outline: none !important;
+}
+
+.container-output{
+  float: right;
+  background-color: white;
+  text-align: center;
+  width: 350px;
+  height: 550px;
+  vertical-align: top;
+  margin: 0 2%; 
+  padding: 30px 10px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: relative;
+  bottom: 70px;
+
+}
+
+.container-output img{
+  width: 70%;
+}
+
+#img-not-message{
+  visibility: visible;
+}
+
+.ontainer-output h2{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.ontainer-output p{
+  margin: 2.5%;
+  font-size: 17px;
+}
+
+#output-text{
+  padding: 30px 20px;
+}
+
+#result{
+  width: 100%;
+  height: 90%;
+  font-size: 24px;
+  color: grey;
+  text-align: left;
+  visibility: visible;
+  background-color: white;
+  display: none;
+}
+
+#not-message{
+  visibility: visible;
+  margin-bottom: 2%;
+}
+
+#description-not-mensaje{
+  visibility: visible;
+}
+
+.texto{
+  resize: none;
+  border: none;
+  font-size: 24px;
+  font-weight: 400px;
+  height: 100%;
+}
+
+.copy{
+  margin: 10% 0;
+  width: 75%;
+  padding: 4% 0;
+  font-size: 18px;
+  border-radius: 24px;
+  border: solid;
+  border-width: thin;
+  cursor: pointer;
+  color: #0A3871;
+  background-color: white;
+  transition: 1s all;
+  display: none;
+}
+
+.copy:hover{
+  background-color:rgb(71, 71, 140);
+}
+
+.buttons{
+  display: block;
+}
+
+.buttons p{
+  font-size: 15px;
+  color: gray;
+  margin: 1%;
+  margin-left: -10px;
+  display: inline-block;
+  font-family: 'Inter';
+  vertical-align: top;
+}
+
+.buttons span{
+  color: gray;
+}
+
+.container-icon{
+  margin-bottom: 10px;
+}
+.encrypt{
+  margin: auto;
+  width: 20%;
+  padding: 1%;
+  font-size: 18px;
+  border: none;
+  background-color: #0A3871;
+  border-radius: 24px;
+  transition: 1s all;
+  cursor: pointer;
+  color: white;
+}
+
+.encrypt:hover{
+  background-color:rgb(71, 71, 140);
+}
+
+.decrypt{
+  margin-left: 4%;
+  width: 20%;
+  padding: 1%;
+  font-size: 18px;
+  border: solid;
+  border-width: thin;
+  background-color: #d8dfe8;
+  color: rgb(19,38,92);
+  border-color: rgb(19,38,92);
+  border-radius: 24px;
+  transition: 1s all;
+  cursor: pointer;
+}
+
+.decrypt:hover{
+  background-color:rgb(71, 71, 140);
+}
+
+/* -------------------------------- */
+@media screen and (max-width:1024px){ 
+
+  body{
+    overflow: visible;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    height: auto; 
+  }
+
+  .elemento1{
+    order: 3;
+  }
+
+  .logo-alura{
+    margin: 4% 0px 4% 4%;
+  }
+
+  .text,
+  .buttons{
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+
+  #text{
+    height: 9.5em;
+  }
+
+  #result{
+    height: auto;
+    height: 400px;
+
+  }
+
+  .container-output{
+    width: 95%;
+    height: auto;
+    float: none;
+    display: block;
+    margin: 3% auto;
+    margin-bottom: 8%;
+    position: static;
+  }
+
+  #output-text{
+    padding: 1px;
+  }
+
+  .encrypt, 
+  .decrypt,
+  .copy{
+    width: 45%;
+    margin: 2%;
+    padding: 2% 0;
+  }
+
+  .decrypt:hover, 
+  .copy:hover{
+    background-color: #d8dfe8;
+  }
+
+  .encrypt:hover{
+    background-color: darkblue;
+  }
+
+  #img-not-message{
+    display: none;
+  }
+
+}
+
+@media screen and (max-width:480px){
+  #text{
+    height: 550px;
+  }
+
+  .buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .encrypt,
+  .decrypt{
+    width: 95%;
+    padding: 5% 0;
+  }
+
+  .copy{
+    width: 95%;
+    padding: 5% 0;
+  }
+
+  .container-icon{
+    margin-left: -15%;
+  }
+}

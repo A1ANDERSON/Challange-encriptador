@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador Alura</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="shortcut icon" href="logoalura.ico">
+  </head>
+  <body>
+    <div class="padre">
+
+    </div>
+    <header>
+      <h1><img src="logo.png" alt="Logo encriptar alura" class="logo-alura" /></h1>
+    </header>
+
+    <main class="container">  <!-- Contenedor -->
+      <textarea name="texto" id="text" class="text elemento1" cols="35" rows="9" placeholder="Ingrese texto aqui"></textarea>
+
+      <div class="container-output elemento2" id="container-output"><!-- SAlida -->
+
+        <div class="output-text" id="output-text">
+          <h2>
+            <img src="munieco.png" alt="Texto no encontrado" id="img-not-message"/>
+          </h2>
+          <h2 id="not-message">Ningún mensaje fue encontrado</h2>
+          <p id="description-not-message">Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+        
+        <div>
+          <textarea name="text" id="result" class="texto" cols="50" rows="14"></textarea>
+          <input type="submit" value="Copiar" class="copy" id="copy">
+        </div>
+
+      </div>
+
+      <div class="buttons elemento3"> <!-- Botones -->
+        <div class="container-icon">
+          <span class="material-symbols-outlined icon-error">
+            error
+            <p >Solo letras minúsculas y sin acento</p>
+          </span>
+        </div>
+        
+        <input type="submit" value="Encriptar" class="encrypt" id="encrypt">
+        <input type="submit" value="Desencriptar" class="decrypt" id="decrypt">
+      </div>
+
+    </main>
+    <script src="script.js">
+    </script>
+
+  </body>
+</html>
